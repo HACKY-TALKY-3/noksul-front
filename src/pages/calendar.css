@@ -151,3 +151,10 @@
 .react-calendar--selectRange .react-calendar__tile--hover {
   background-color: #e6e6e6;
 }
+
+/* highlight 클래스는 selectedDate와 일치하는 날짜에만 적용됨 */
+.highlight {
+  background-color: #e0defa; /* 원하는 배경색 */
+  color: #5858fa;
+  border-radius: 50%; /* 선택된 날짜를 둥글게 표시 (옵션) */
+}
