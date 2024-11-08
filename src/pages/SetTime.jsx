@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Button, HStack, VStack } from "@channel.io/bezier-react";
+import { useLocation } from "react-router-dom";
 
 function SetTime() {
   // 각 버튼의 hover 상태를 개별적으로 관리하기 위해 객체를 사용
   const [hoveredButton, setHoveredButton] = useState(null);
+
+  const location = useLocation();
+  const selectedDate = location.state?.date;
 
   const getButtonStyle = (buttonText) => ({
     backgroundColor: hoveredButton === buttonText ? "#E0DEFA" : "white",
@@ -22,6 +26,7 @@ function SetTime() {
   return (
     <div>
       <h1>일정 추가 &gt; 시간 선택</h1>
+
       <VStack spacing={10}>
         <HStack spacing={20}>
           <Button
@@ -140,6 +145,8 @@ function SetTime() {
           />
         </HStack>
       </VStack>
+
+
     </div>
   );
 }
