@@ -17,7 +17,6 @@ function PickDate() {
 
     const goToNext = () => {
         navigate('/appointment-create/set-time', { state: { date: selectedDate } });
-
     }
 
     return (
